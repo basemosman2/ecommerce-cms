@@ -4,7 +4,7 @@
 import { useStoreModal } from "@/hooks/use-store-modal";
 import { useEffect } from "react";
 
-export default function Home() {
+export default function SetupPage() {
   const onOpen = useStoreModal((state) => state.onOpen);
   const isOpen = useStoreModal((state) => state.isOpen);
 
@@ -14,9 +14,5 @@ export default function Home() {
     }
   }, [isOpen, onOpen]);
 
-  return (
-    <div className="p-6 ">
-      <h1>basem osman</h1>
-    </div>
-  );
+  return null;
 }
