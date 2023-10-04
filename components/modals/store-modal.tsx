@@ -25,10 +25,13 @@ const formSchema = z.object({
   name: z.string().min(1),
 });
 
+// store model for let user create new store 
+
 export const StoreModal = () => {
   const [loading, setLoading] = useState(false)
   const storeModal = useStoreModal();
 
+  // form validation using zod 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,6 +39,7 @@ export const StoreModal = () => {
     },
   });
 
+  // submit the form data to backend route to create new store in database 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try{
       setLoading(true);

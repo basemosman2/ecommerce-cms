@@ -44,12 +44,12 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
   const router = useRouter();
   const origin = useOrigin();
 
-
+// form validation using zod 
   const form = useForm<SettingsFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: initialData,
   });
-
+  // update existing store with new store name
   const onSubmit = async (data: SettingsFormValues) => {
     try {
         setLoading(true);
@@ -62,7 +62,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
         setLoading(false);
       }
   }
-
+  // delete existing store 
   const onDelete = async () => {
     try {
       setLoading(true);

@@ -5,6 +5,7 @@ import prismaDB from "@/lib/prismaDB";
 import StoreSwitcher from "@/components/store-switcher";
 import { MainNav } from "@/components/main-nav";
 
+// 
 const Navbar = async () => {
   const { userId } = auth();
 

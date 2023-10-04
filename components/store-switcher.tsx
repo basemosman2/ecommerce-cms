@@ -28,6 +28,8 @@ interface StoreSwitcherProps extends PopoverTriggerProps {
   items: Record<string, any>[];
 }
 
+// store switcher to select a store from store list then redirect to store overview
+
 export default function StoreSwitcher({ className, items = [] }: StoreSwitcherProps) {
   const storeModal = useStoreModal();
   const params = useParams();
